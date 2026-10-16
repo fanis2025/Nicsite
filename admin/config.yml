@@ -24,9 +24,9 @@ collections:
             fields:
               - { label: "ID", name: "id", widget: "number", value_type: "int" }
               - { label: "Τίτλος", name: "title", widget: "string" }
-              - { label: "Κατηγορία", name: "category", widget: "select", options: ["Κοινωνία", "Τεχνολογία", "Οικονομία", "Πολιτισμός", "Γνώμη"] }
+              - { label: "Κατηγορία", name: "category", widget: "select", options: ["Κοινωνία", "Πολιτική", "Ψυχολογία"] }
               - { label: "Ημερομηνία (π.χ. 16 ΟΚΤΩΒΡΙΟΥ 2026)", name: "date", widget: "string" }
-              - { label: "Χρόνος ανάγνωσης", name: "read", widget: "string", default: "4 ΛΕΠΤΑ" }
+              - { label: "Χρόνος ανάγνωσης", name: "read", widget: "string", default: "1 ΛΕΠΤΟ" }
               - { label: "Σύντομη περιγραφή", name: "summary", widget: "text" }
               - { label: "Ετικέτα εικόνας (μικρό κείμενο)", name: "label", widget: "string", required: false, default: "NICSITE" }
               - { label: "Εικόνα άρθρου", name: "image", widget: "image", required: false }
