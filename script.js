@@ -3,6 +3,7 @@ const grid=document.getElementById("article-grid");
 const search=document.getElementById("search");
 const empty=document.getElementById("empty-state");
 const count=document.getElementById("result-count");
+const categoryTotal=document.getElementById("category-total");
 let activeCategory="Όλα";
 function renderArticles(){
  const term=search.value.trim().toLocaleLowerCase("el");
@@ -14,6 +15,7 @@ function renderArticles(){
  </article>`).join("");
  empty.hidden=filtered.length!==0;
  count.textContent=String(filtered.length).padStart(2,"0")+" ΑΡΘΡΑ";
+ categoryTotal.textContent=String(articles.length).padStart(2,"0");
  grid.querySelectorAll(".article-card").forEach(card=>{
   const open=()=>showArticle(Number(card.dataset.id));
   card.addEventListener("click",open);
