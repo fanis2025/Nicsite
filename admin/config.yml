@@ -1,0 +1,35 @@
+backend:
+  name: turbo-github
+  turbo_site_id: REPLACE_WITH_TURBO_SITE_ID
+  branch: main
+
+locale: 'el'
+
+media_folder: "images/uploads"
+public_folder: "/Nicsite/images/uploads"
+
+collections:
+  - name: "articles"
+    label: "Άρθρα"
+    files:
+      - label: "Όλα τα άρθρα"
+        name: "articles"
+        file: "content/articles.json"
+        format: json
+        fields:
+          - label: "Άρθρα"
+            name: "articles"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.category}}"
+            fields:
+              - { label: "ID", name: "id", widget: "number", value_type: "int" }
+              - { label: "Τίτλος", name: "title", widget: "string" }
+              - { label: "Κατηγορία", name: "category", widget: "select", options: ["Κοινωνία", "Τεχνολογία", "Οικονομία", "Πολιτισμός", "Γνώμη"] }
+              - { label: "Ημερομηνία (π.χ. 16 ΟΚΤΩΒΡΙΟΥ 2026)", name: "date", widget: "string" }
+              - { label: "Χρόνος ανάγνωσης", name: "read", widget: "string", default: "4 ΛΕΠΤΑ" }
+              - { label: "Σύντομη περιγραφή", name: "summary", widget: "text" }
+              - { label: "Ετικέτα εικόνας (μικρό κείμενο)", name: "label", widget: "string", required: false, default: "NICSITE" }
+              - { label: "Εικόνα άρθρου", name: "image", widget: "image", required: false }
+              - { label: "Χρώμα φόντου (hex)", name: "visual", widget: "string", default: "#d7fb58", required: false }
+              - { label: "Χρώμα σχήματος (hex)", name: "shape", widget: "string", default: "#272920", required: false }
+              - { label: "Κείμενο άρθρου", name: "body", widget: "text" }
