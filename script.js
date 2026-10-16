@@ -7,7 +7,7 @@ const categoryTotal=document.getElementById("category-total");
 let activeCategory="Όλα";
 function renderArticles(){
  const term=search.value.trim().toLocaleLowerCase("el");
- const filtered=articles.filter(a=>(activeCategory==="Όλα"||a.category===activeCategory)&&[a.title,a.summary,a.category,a.body].some(v=>v.toLocaleLowerCase("el").includes(term)));
+ const filtered=articles.filter(a=>(activeCategory==="Όλα"||a.category===activeCategory)&&[a.title,a.summary,a.category,a.body].some(v=>String(v||"").toLocaleLowerCase("el").includes(term)));
  grid.innerHTML=filtered.map(a=>`<article class="article-card" tabindex="0" role="button" aria-label="Διάβασε: ${a.title}" data-id="${a.id}">
    <div class="article-visual ${a.image ? "has-cover" : ""}" style="--visual:${a.visual};--shape:${a.shape}">${a.image ? `<img class="article-cover" src="${a.image}" alt="${a.title}" loading="lazy">` : ""}<div class="visual-shape"></div><span class="visual-label">${a.label}</span></div>
    <div class="card-meta"><span class="card-category">${a.category.toUpperCase()}</span><span>${a.read}</span></div>
@@ -22,19 +22,23 @@ function renderArticles(){
   card.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open()}});
  });
 }
+function chooseCategory(category){
+ activeCategory=category;
+ document.querySelectorAll(".filter").forEach(b=>b.classList.toggle("active",b.dataset.category===category));
+ renderArticles();
+}
 function showArticle(id){
  const a=articles.find(item=>item.id===id);if(!a)return;
  const modal=document.createElement("dialog");modal.className="article-dialog";
- modal.innerHTML=`<div class="dialog-top"><span class="eyebrow">${a.category.toUpperCase()} · ${a.date}</span><button class="icon-button close-dialog" aria-label="Κλείσιμο">×</button></div><div class="dialog-art ${a.image ? "has-cover" : ""}" style="--visual:${a.visual};--shape:${a.shape}">${a.image ? `<img class="article-cover" src="${a.image}" alt="${a.title}">` : ""}<div class="visual-shape"></div><span class="visual-label">${a.label}</span></div><h2>${a.title}</h2><p class="dialog-summary">${a.summary}</p><div class="dialog-body">${a.body}</div><div class="dialog-end">NICSITE. · ΙΔΕΕΣ. ΑΠΟΨΗ. ΠΑΡΑΤΗΡΗΣΗ.</div>`;
+ modal.innerHTML=`<div class="dialog-top"><span class="eyebrow">${a.category.toUpperCase()} · ${a.date}</span><button class="icon-button close-dialog" aria-label="Κλείσιμο">×</button></div><div class="dialog-art ${a.image ? "has-cover" : ""}" style="--visual:${a.visual};--shape:${a.shape}">${a.image ? `<img class="article-cover" src="${a.image}" alt="${a.title}">` : ""}<div class="visual-shape"></div><span class="visual-label">${a.label}</span></div><h2>${a.title}</h2><p class="dialog-summary">${a.summary}</p><div class="dialog-body">${a.body}</div><div class="dialog-end">NICSITE. · ΚΟΙΝΩΝΙΑ. ΠΟΛΙΤΙΚΗ. ΨΥΧΟΛΟΓΙΑ.</div>`;
  document.body.appendChild(modal);modal.showModal();
  modal.querySelector(".close-dialog").addEventListener("click",()=>modal.close());
  modal.addEventListener("click",e=>{if(e.target===modal)modal.close()});
  modal.addEventListener("close",()=>modal.remove());
 }
-document.querySelectorAll(".filter").forEach(button=>button.addEventListener("click",()=>{
- activeCategory=button.dataset.category;
- document.querySelectorAll(".filter").forEach(b=>b.classList.toggle("active",b===button));
- renderArticles();
+document.querySelectorAll(".filter").forEach(button=>button.addEventListener("click",()=>chooseCategory(button.dataset.category)));
+document.querySelectorAll("[data-nav-category]").forEach(link=>link.addEventListener("click",()=>{
+ chooseCategory(link.dataset.navCategory);
 }));
 search.addEventListener("input",renderArticles);
 document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.classList.toggle("dark");document.querySelector('meta[name="theme-color"]').content=document.body.classList.contains("dark")?"#1d1e1a":"#f5f3ee"});
