@@ -3,17 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Nicsite — άρθρα, ανάλυση και γνώμες για όσα συμβαίνουν γύρω μας.">
+  <meta name="description" content="Nicsite — κοινωνία, πολιτική και ψυχολογία.">
   <meta name="theme-color" content="#f5f3ee">
-  <title>Nicsite — Ιδέες. Άποψη. Παρατήρηση.</title>
+  <title>Nicsite — Κοινωνία. Πολιτική. Ψυχολογία.</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="#" aria-label="Nicsite αρχική"><span class="brand-mark">N.</span><span>Nicsite<span class="brand-dot">.</span></span></a>
-    <nav class="desktop-nav" aria-label="Κύρια πλοήγηση">
-      <a href="#latest">Τελευταία</a><a href="#categories">Θεματολογία</a><a href="#about">Σχετικά</a>
+    <nav class="desktop-nav" aria-label="Κύριες κατηγορίες">
+      <a href="#categories" data-nav-category="Κοινωνία">Κοινωνία</a>
+      <a href="#categories" data-nav-category="Πολιτική">Πολιτική</a>
+      <a href="#categories" data-nav-category="Ψυχολογία">Ψυχολογία</a>
     </nav>
     <div class="header-actions">
       <button class="icon-button" id="theme-toggle" aria-label="Εναλλαγή θέματος" title="Εναλλαγή θέματος">◐</button>
@@ -26,39 +28,37 @@
       <div class="hero-copy">
         <p class="eyebrow"><span class="eyebrow-line"></span> ΕΝΑ ΨΗΦΙΑΚΟ ΠΕΡΙΟΔΙΚΟ</p>
         <h1>Κοίτα λίγο<br>πιο <em>προσεκτικά.</em></h1>
-        <p class="hero-intro">Άρθρα, ανάλυση και γνώμες για την επικαιρότητα, την κοινωνία, την τεχνολογία και τις ιδέες που αξίζει να συζητήσουμε.</p>
+        <p class="hero-intro">Τρεις βασικές θεματικές: κοινωνία, πολιτική και ψυχολογία. Ιδέες και κείμενα που μας βοηθούν να βλέπουμε τα πράγματα από διαφορετικές πλευρές.</p>
         <a class="primary-link" href="#latest">Εξερεύνησε τα άρθρα <span>↓</span></a>
       </div>
       <div class="hero-art" aria-label="Γραφιστική σύνθεση με αφηρημένα σχήματα">
         <div class="art-grid"></div><div class="art-circle"></div><div class="art-block"></div>
         <div class="art-note">OBSERVE<br>QUESTION<br>UNDERSTAND<span>✳</span></div>
-        <div class="art-index">ISSUE Nº 001 / ONLINE</div>
+        <div class="art-index">NICSITE / ONLINE</div>
       </div>
       <div class="hero-bottom"><span>ΣΚΕΨΕΙΣ ΧΩΡΙΣ ΘΟΡΥΒΟ</span><span>ΔΙΑΒΑΣΕ · ΣΚΕΨΟΥ · ΣΥΖΗΤΗΣΕ</span></div>
     </section>
 
     <section class="latest section-wrap" id="latest">
       <div class="section-heading">
-        <div><p class="eyebrow">ΑΠΟ ΤΟ ΠΕΡΙΟΔΙΚΟ</p><h2>Ιδέες σε πρώτο πλάνο<span class="brand-dot">.</span></h2></div>
+        <div><p class="eyebrow">ΑΠΟ ΤΟ ΠΕΡΙΟΔΙΚΟ</p><h2>Οι τρεις θεματικές<span class="brand-dot">.</span></h2></div>
         <label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Αναζήτηση άρθρων…" aria-label="Αναζήτηση άρθρων"><kbd>/</kbd></label>
       </div>
       <div class="filter-row" id="categories" aria-label="Φίλτρα θεματολογίας">
-        <button class="filter active" data-category="Όλα">Όλα τα άρθρα <span id="category-total">06</span></button>
+        <button class="filter active" data-category="Όλα">Όλα τα άρθρα <span id="category-total">03</span></button>
         <button class="filter" data-category="Κοινωνία">Κοινωνία</button>
-        <button class="filter" data-category="Τεχνολογία">Τεχνολογία</button>
-        <button class="filter" data-category="Οικονομία">Οικονομία</button>
-        <button class="filter" data-category="Πολιτισμός">Πολιτισμός</button>
-        <button class="filter" data-category="Γνώμη">Γνώμη</button>
+        <button class="filter" data-category="Πολιτική">Πολιτική</button>
+        <button class="filter" data-category="Ψυχολογία">Ψυχολογία</button>
       </div>
       <div class="article-grid" id="article-grid" aria-live="polite"></div>
       <p class="empty-state" id="empty-state" hidden>Δεν βρέθηκαν άρθρα. Δοκίμασε άλλη αναζήτηση.</p>
-      <div class="section-footer"><span>ΜΙΑ ΜΙΚΡΗ ΠΑΥΣΗ ΑΠΟ ΤΟ SCROLL.</span><span id="result-count">06 ΑΡΘΡΑ</span></div>
+      <div class="section-footer"><span>ΜΙΑ ΜΙΚΡΗ ΠΑΥΣΗ ΑΠΟ ΤΟ SCROLL.</span><span id="result-count">03 ΑΡΘΡΑ</span></div>
     </section>
 
     <section class="manifesto" id="about">
       <div class="manifesto-symbol">N<span>.</span></div>
       <div><p class="eyebrow">ΓΙΑΤΙ NICSITE;</p><h2>Λιγότερος θόρυβος.<br><em>Περισσότερη σκέψη.</em></h2></div>
-      <p class="manifesto-text">Ένας χώρος για να σταθούμε λίγο, να δούμε διαφορετικές πλευρές και να αναζητήσουμε το νόημα πίσω από την είδηση. Όχι για να συμφωνούμε σε όλα — αλλά για να σκεφτόμαστε καλύτερα.</p>
+      <p class="manifesto-text">Ένας χώρος για να σταθούμε λίγο, να δούμε διαφορετικές πλευρές και να αναζητήσουμε το νόημα πίσω από όσα συμβαίνουν γύρω μας. Όχι για να συμφωνούμε σε όλα — αλλά για να σκεφτόμαστε καλύτερα.</p>
     </section>
 
     <section class="newsletter">
@@ -67,6 +67,6 @@
     </section>
   </main>
 
-  <footer class="site-footer"><a class="brand footer-brand" href="#"><span class="brand-mark">N.</span><span>Nicsite<span class="brand-dot">.</span></span></a><span>Ιδέες. Άποψη. Παρατήρηση.</span><span>© <span id="year"></span> Nicsite</span></footer>
+  <footer class="site-footer"><a class="brand footer-brand" href="#"><span class="brand-mark">N.</span><span>Nicsite<span class="brand-dot">.</span></span></a><span>Κοινωνία. Πολιτική. Ψυχολογία.</span><span>© <span id="year"></span> Nicsite</span></footer>
 </body>
 </html>
