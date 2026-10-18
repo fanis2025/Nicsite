@@ -3,20 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Nicsite — κοινωνία, πολιτική και ψυχολογία.">
+  <meta name="description" content="Είμαι η Νικολ και εδώ θα βρείτε τις απόψεις μου σε διάφορα θέματα που με απασχολούν.">
   <meta name="theme-color" content="#f5f3ee">
-  <title>Nicsite — Κοινωνία. Πολιτική. Ψυχολογία.</title>
+  <title>Οι απόψεις της Νικολ</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#" aria-label="Nicsite αρχική"><span class="brand-mark">N.</span><span>Nicsite<span class="brand-dot">.</span></span></a>
-    <nav class="desktop-nav" aria-label="Κύριες κατηγορίες">
-      <a href="#categories" data-nav-category="Κοινωνία">Κοινωνία</a>
-      <a href="#categories" data-nav-category="Πολιτική">Πολιτική</a>
-      <a href="#categories" data-nav-category="Ψυχολογία">Ψυχολογία</a>
-    </nav>
+    <a class="brand" href="#" aria-label="Αρχική σελίδα"><span class="brand-mark">Ν.</span><span>Οι απόψεις της Νικολ<span class="brand-dot">.</span></span></a>
+    <nav class="desktop-nav" aria-label="Πλοήγηση"><a href="#latest">Τα άρθρα μου</a><a href="#about">Σχετικά</a></nav>
     <div class="header-actions">
       <button class="icon-button" id="theme-toggle" aria-label="Εναλλαγή θέματος" title="Εναλλαγή θέματος">◐</button>
       <a class="write-link" href="mailto:hello@nicsite.gr?subject=Επικοινωνία%20με%20Nicsite">Επικοινωνία <span>↗</span></a>
@@ -24,24 +20,24 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero personal-hero">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="eyebrow-line"></span> ΕΝΑ ΨΗΦΙΑΚΟ ΠΕΡΙΟΔΙΚΟ</p>
-        <h1>Κοίτα λίγο<br>πιο <em>προσεκτικά.</em></h1>
-        <p class="hero-intro">Τρεις βασικές θεματικές: κοινωνία, πολιτική και ψυχολογία. Ιδέες και κείμενα που μας βοηθούν να βλέπουμε τα πράγματα από διαφορετικές πλευρές.</p>
-        <a class="primary-link" href="#latest">Εξερεύνησε τα άρθρα <span>↓</span></a>
+        <p class="eyebrow"><span class="eyebrow-line"></span> ΚΑΛΩΣ ΗΡΘΑΤΕ ΣΤΟΝ ΧΩΡΟ ΜΟΥ</p>
+        <h1>Είμαι η <em>Νικολ.</em></h1>
+        <p class="hero-intro">Είμαι η Νικολ και εδώ θα βρείτε τις απόψεις μου σε διάφορα θέματα που με απασχολούν.</p>
+        <a class="primary-link" href="#latest">Τα άρθρα μου <span>↓</span></a>
       </div>
-      <div class="hero-art" aria-label="Γραφιστική σύνθεση με αφηρημένα σχήματα">
+      <div class="hero-art" aria-label="Αφηρημένη καλλιτεχνική σύνθεση">
         <div class="art-grid"></div><div class="art-circle"></div><div class="art-block"></div>
-        <div class="art-note">OBSERVE<br>QUESTION<br>UNDERSTAND<span>✳</span></div>
-        <div class="art-index">NICSITE / ONLINE</div>
+        <div class="art-note">ΣΚΕΨΟΥ<br>ΑΝΑΡΩΤΗΣΟΥ<br>ΜΟΙΡΑΣΟΥ<span>✳</span></div>
+        <div class="art-index">ΣΗΜΕΙΩΣΕΙΣ ΤΗΣ ΝΙΚΟΛ</div>
       </div>
-      <div class="hero-bottom"><span>ΣΚΕΨΕΙΣ ΧΩΡΙΣ ΘΟΡΥΒΟ</span><span>ΔΙΑΒΑΣΕ · ΣΚΕΨΟΥ · ΣΥΖΗΤΗΣΕ</span></div>
+      <div class="hero-bottom"><span>ΠΡΟΣΩΠΙΚΕΣ ΑΠΟΨΕΙΣ</span><span>ΚΟΙΝΩΝΙΑ · ΠΟΛΙΤΙΚΗ · ΨΥΧΟΛΟΓΙΑ</span></div>
     </section>
 
     <section class="latest section-wrap" id="latest">
       <div class="section-heading">
-        <div><p class="eyebrow">ΑΠΟ ΤΟ ΠΕΡΙΟΔΙΚΟ</p><h2>Οι τρεις θεματικές<span class="brand-dot">.</span></h2></div>
+        <div><p class="eyebrow">ΣΚΕΨΕΙΣ ΚΑΙ ΠΡΟΒΛΗΜΑΤΙΣΜΟΙ</p><h2>Τα άρθρα μου<span class="brand-dot">.</span></h2></div>
         <label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Αναζήτηση άρθρων…" aria-label="Αναζήτηση άρθρων"><kbd>/</kbd></label>
       </div>
       <div class="filter-row" id="categories" aria-label="Φίλτρα θεματολογίας">
@@ -57,16 +53,16 @@
 
     <section class="manifesto" id="about">
       <div class="manifesto-symbol">N<span>.</span></div>
-      <div><p class="eyebrow">ΓΙΑΤΙ NICSITE;</p><h2>Λιγότερος θόρυβος.<br><em>Περισσότερη σκέψη.</em></h2></div>
-      <p class="manifesto-text">Ένας χώρος για να σταθούμε λίγο, να δούμε διαφορετικές πλευρές και να αναζητήσουμε το νόημα πίσω από όσα συμβαίνουν γύρω μας. Όχι για να συμφωνούμε σε όλα — αλλά για να σκεφτόμαστε καλύτερα.</p>
+      <div><p class="eyebrow">ΛΙΓΑ ΛΟΓΙΑ ΓΙΑ ΜΕΝΑ</p><h2>Σκέψεις που<br><em>αξίζει να μοιραστούμε.</em></h2></div>
+      <p class="manifesto-text">Εδώ συγκεντρώνω σκέψεις, ερωτήματα και απόψεις για θέματα που με απασχολούν. Τα κείμενα είναι μια αφορμή για προβληματισμό και συζήτηση.</p>
     </section>
 
     <section class="newsletter">
-      <div><p class="eyebrow">ΜΕΙΝΕ ΣΕ ΕΠΑΦΗ</p><h2>Οι καλές ιδέες<br>συνεχίζονται.</h2></div>
+      <div><p class="eyebrow">ΕΧΕΙΣ ΚΑΤΙ ΝΑ ΠΕΙΣ;</p><h2>Η συζήτηση<br>συνεχίζεται.</h2></div>
       <div class="newsletter-right"><p>Έχεις ένα θέμα που αξίζει να συζητηθεί ή θέλεις να προτείνεις ένα άρθρο;</p><a class="primary-link" href="mailto:hello@nicsite.gr?subject=Πρόταση%20άρθρου">Στείλε μας την ιδέα σου <span>↗</span></a><small>Η διεύθυνση email είναι ενδεικτική και μπορεί να αλλάξει.</small></div>
     </section>
   </main>
 
-  <footer class="site-footer"><a class="brand footer-brand" href="#"><span class="brand-mark">N.</span><span>Nicsite<span class="brand-dot">.</span></span></a><span>Κοινωνία. Πολιτική. Ψυχολογία.</span><span>© <span id="year"></span> Nicsite</span></footer>
+  <footer class="site-footer"><a class="brand footer-brand" href="#"><span class="brand-mark">N.</span><span>Νικολ<span class="brand-dot">.</span></span></a><span>Προσωπικές απόψεις και σκέψεις.</span><span>© <span id="year"></span> Nicsite</span></footer>
 </body>
 </html>
