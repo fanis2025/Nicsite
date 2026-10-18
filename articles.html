@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Όλα τα άρθρα της Νικολ για την κοινωνία, την πολιτική και την ψυχολογία.">
+  <meta name="theme-color" content="#f5f3ee">
+  <title>Τα άρθρα μου — Νικολ</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="articles-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Επιστροφή στην αρχική"><span class="brand-mark">Ν.</span><span>Οι απόψεις της Νικολ<span class="brand-dot">.</span></span></a>
+    <nav class="desktop-nav" aria-label="Κύρια πλοήγηση"><a href="index.html">Αρχική</a><a href="articles.html" aria-current="page">Τα άρθρα μου</a></nav>
+    <div class="header-actions"><button class="icon-button" id="theme-toggle" aria-label="Εναλλαγή θέματος" title="Εναλλαγή θέματος">◐</button></div>
+  </header>
+  <main>
+    <section class="articles-intro section-wrap">
+      <p class="eyebrow"><span class="eyebrow-line"></span> ΚΟΙΝΩΝΙΑ · ΠΟΛΙΤΙΚΗ · ΨΥΧΟΛΟΓΙΑ</p>
+      <h1>Τα άρθρα <em>μου.</em></h1>
+      <p class="articles-lead">Οι σκέψεις μου, συγκεντρωμένες σε ένα μέρος.</p>
+      <div class="section-heading article-tools"><div><h2>Όλα τα άρθρα<span class="brand-dot">.</span></h2></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Αναζήτηση άρθρων…" aria-label="Αναζήτηση άρθρων"><kbd>/</kbd></label></div>
+      <div class="filter-row" id="categories" aria-label="Φίλτρα θεματολογίας"><button class="filter active" data-category="Όλα">Όλα τα άρθρα <span id="category-total">03</span></button><button class="filter" data-category="Κοινωνία">Κοινωνία</button><button class="filter" data-category="Πολιτική">Πολιτική</button><button class="filter" data-category="Ψυχολογία">Ψυχολογία</button></div>
+      <div class="article-grid" id="article-grid" aria-live="polite"></div>
+      <p class="empty-state" id="empty-state" hidden>Δεν βρέθηκαν άρθρα. Δοκίμασε άλλη αναζήτηση.</p>
+      <div class="section-footer"><span>ΟΙ ΑΠΟΨΕΙΣ ΤΗΣ ΝΙΚΟΛ</span><span id="result-count">03 ΑΡΘΡΑ</span></div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand footer-brand" href="index.html"><span class="brand-mark">Ν.</span><span>Νικολ<span class="brand-dot">.</span></span></a><a href="index.html">← Επιστροφή στην αρχική</a><span>© <span id="year"></span> Νικολ</span></footer>
+</body>
+</html>
