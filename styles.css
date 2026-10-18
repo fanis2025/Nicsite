@@ -30,3 +30,10 @@ body.dark{--paper:#1d1e1a;--ink:#f0efe8;--muted:#a6a69b;--line:#3d3e37;--accent:
 .articles-page .read-more{max-width:650px}
 .articles-page .visual-label{font-size:8px}
 @media(max-width:600px){.articles-page .article-card{grid-template-columns:1fr;gap:20px;padding:24px 0}.articles-page .article-visual{aspect-ratio:1.6}.articles-page .article-card h3{font-size:26px}.articles-page .article-card p{font-size:14px}}
+
+
+/* Soft light-pink site background */
+:root{--paper:#fff1f5;--line:#ead5dd;--card:#f9e5ec}
+body:not(.dark){background:var(--paper)}
+body:not(.dark) .manifesto{background:#f8e2ea}
+body:not(.dark) .art-block{background:#fff1f5}
