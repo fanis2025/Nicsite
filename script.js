@@ -37,9 +37,7 @@ function showArticle(id){
  modal.addEventListener("close",()=>modal.remove());
 }
 document.querySelectorAll(".filter").forEach(button=>button.addEventListener("click",()=>chooseCategory(button.dataset.category)));
-document.querySelectorAll("[data-nav-category]").forEach(link=>link.addEventListener("click",()=>{
- chooseCategory(link.dataset.navCategory);
-}));
+
 search.addEventListener("input",renderArticles);
 document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.classList.toggle("dark");document.querySelector('meta[name="theme-color"]').content=document.body.classList.contains("dark")?"#1d1e1a":"#f5f3ee"});
 document.addEventListener("keydown",e=>{if(e.key==="/"&&!["INPUT","TEXTAREA"].includes(document.activeElement.tagName)){e.preventDefault();search.focus()}});
