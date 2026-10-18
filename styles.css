@@ -37,3 +37,7 @@ body.dark{--paper:#1d1e1a;--ink:#f0efe8;--muted:#a6a69b;--line:#3d3e37;--accent:
 body:not(.dark){background:var(--paper)}
 body:not(.dark) .manifesto{background:#f8e2ea}
 body:not(.dark) .art-block{background:#fff1f5}
+
+/* Keep both navigation links visible; mark the current page without hiding it. */
+.desktop-nav a{display:inline-block;visibility:visible;opacity:1}
+.desktop-nav a[aria-current="page"]{color:var(--ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
