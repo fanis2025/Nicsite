@@ -39,9 +39,9 @@ function showArticle(id){
 document.querySelectorAll(".filter").forEach(button=>button.addEventListener("click",()=>chooseCategory(button.dataset.category)));
 
 search.addEventListener("input",renderArticles);
-document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.classList.toggle("dark");document.querySelector('meta[name="theme-color"]').content=document.body.classList.contains("dark")?"#1d1e1a":"#f5f3ee"});
+const themeToggle=document.getElementById("theme-toggle");if(themeToggle)themeToggle.addEventListener("click",()=>{document.body.classList.toggle("dark");document.querySelector('meta[name="theme-color"]').content=document.body.classList.contains("dark")?"#1d1e1a":"#f5f3ee"});
 document.addEventListener("keydown",e=>{if(e.key==="/"&&!["INPUT","TEXTAREA"].includes(document.activeElement.tagName)){e.preventDefault();search.focus()}});
-document.getElementById("year").textContent=new Date().getFullYear();
+const yearNode=document.getElementById("year");if(yearNode)yearNode.textContent=new Date().getFullYear();
 const extraStyles=document.createElement("style");
 extraStyles.textContent=`.article-dialog{width:min(680px,calc(100% - 28px));max-height:90vh;overflow:auto;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:clamp(20px,5vw,42px)}.article-dialog::backdrop{background:#111b;backdrop-filter:blur(4px)}.dialog-top{display:flex;justify-content:space-between;align-items:center;gap:15px}.dialog-top .eyebrow{margin:0}.close-dialog{font-size:25px;flex-shrink:0}.dialog-art{margin:24px 0;min-height:180px;background:var(--visual);display:grid;place-items:center;position:relative;overflow:hidden}.dialog-art .visual-shape{width:28%;background:var(--shape)}.dialog-art .visual-label{color:var(--shape)}.article-dialog h2{font-size:clamp(28px,5vw,42px);line-height:1.15;letter-spacing:-1.5px;margin:15px 0}.dialog-summary{font-size:17px;line-height:1.7;color:var(--muted)}.dialog-body{font-size:15px;line-height:2;white-space:normal;margin-top:25px}.dialog-end{margin-top:35px;padding-top:15px;border-top:1px solid var(--line);font:9px var(--mono);letter-spacing:1px;color:var(--muted)}`;
 document.head.appendChild(extraStyles);
